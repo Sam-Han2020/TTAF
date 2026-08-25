@@ -3,15 +3,13 @@
 Code release for **Leveraging Teacher-Forcing Token-Level Anomaly
 Signals for Heterogeneous Backdoor Filtering in LLMs**.
 
-TTAF (Teacher-Forcing Token-Level Anomaly Filtering) detects suspicious
-instruction-tuning samples before fine-tuning. It scores localized target-token
-anomalies under teacher forcing, smooths the token-level signal, and aggregates
-the strongest local evidence into a sample-level filtering score.
+## Overview
 
-This repository intentionally provides the smallest paper-facing workflow: the
-Word-trigger attack, TTAF detection/filtering, and the four question-answering
-datasets used in the paper. The implementation is adapted from GraCeFul and
-OpenBackdoor; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+![TTAF framework](./assets/method.jpg)
+
+TTAF (Teacher-Forcing Token-Level Anomaly Filtering) detects suspicious instruction-tuning samples before fine-tuning. It scores localized target-token anomalies under teacher forcing, smooths the token-level signal, and aggregates the strongest local evidence into a sample-level filtering score.
+
+This repository intentionally provides the smallest paper-facing workflow: the Word-trigger attack, TTAF detection/filtering, and the four question-answering datasets used in the paper. The implementation is adapted from GraCeFul and OpenBackdoor; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Included
 
