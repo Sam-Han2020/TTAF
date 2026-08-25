@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Models, caches, and generated results
+models/
+poison_data/
+outputResults/
+leaf/
+detect_eval_runs/
+logs/
+**/hf_cache/
+
+# Large experiment artifacts
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors

@@ -1,0 +1,17 @@
+torch
+transformers
+accelerate
+peft
+datasets
+numpy
+pandas
+scikit-learn
+tqdm
+rouge
+matplotlib
+seaborn
+umap-learn
+huggingface-hub
+sentencepiece
+protobuf
+bigmodelvis
