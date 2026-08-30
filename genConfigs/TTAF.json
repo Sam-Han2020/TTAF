@@ -90,7 +90,7 @@
         "dominant_length_c": 17.0,
         "max_remove_ratio": 0.30,
         "save_artifacts": true,
-        "artifacts_dir": "./leaf"
+        "artifacts_dir": "./ttaf"
     },
 
 

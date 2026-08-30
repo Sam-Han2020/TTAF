@@ -14,7 +14,7 @@ Thumbs.db
 models/
 poison_data/
 outputResults/
-leaf/
+ttaf/
 detect_eval_runs/
 logs/
 **/hf_cache/

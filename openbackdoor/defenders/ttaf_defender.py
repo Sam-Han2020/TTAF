@@ -41,7 +41,7 @@
 # #     - the same fixed dominant-item length calibration is applied to all samples
 # #     """
 
-# #     name = "leaf"
+# #     name = "ttaf"
 
 # #     def __init__(
 # #         self,
@@ -52,7 +52,7 @@
 # #         min_dataset_size: int = 30,
 # #         max_remove_ratio: float = 0.3,
 # #         save_artifacts: bool = True,
-# #         artifacts_dir: str = "./leaf",
+# #         artifacts_dir: str = "./ttaf",
 # #         targetDataset: Optional[str] = None,
 
 # #         # feature extraction
@@ -499,7 +499,7 @@
 # #         ) if self.dominant_length_scale else None
 
 # #         feature_pack = {
-# #             "defender": "leaf",
+# #             "defender": "ttaf",
 # #             "mode": "feature_extraction_only_item_aware",
 # #             "true_labels": true_labels,
 # #             "dataset": self.targetDataset,
@@ -552,7 +552,7 @@
 # #             feature_pack["raw_text"] = raw_text_payload
 
 # #         if self.save_artifacts:
-# #             fpath = os.path.join(self.run_dir, "leaf_features_only.pkl")
+# #             fpath = os.path.join(self.run_dir, "ttaf_features_only.pkl")
 # #             with open(fpath, "wb") as f:
 # #                 pickle.dump(feature_pack, f, protocol=pickle.HIGHEST_PROTOCOL)
 # #             logger.info(f"[TTAF] saved feature-only artifacts to {fpath}")
@@ -1172,7 +1172,7 @@
 # #             return
 
 # #         payload: Dict[str, Any] = {
-# #             "defender": "leaf",
+# #             "defender": "ttaf",
 # #             "mode": mode,
 # #             "true_labels": true_labels,
 # #             "preds": preds.astype(np.int32),
@@ -1232,7 +1232,7 @@
 # #         if raw_text_payload is not None:
 # #             payload["raw_text"] = raw_text_payload
 
-# #         fpath = os.path.join(self.run_dir, "leaf_features.pkl")
+# #         fpath = os.path.join(self.run_dir, "ttaf_features.pkl")
 # #         with open(fpath, "wb") as f:
 # #             pickle.dump(payload, f, protocol=pickle.HIGHEST_PROTOCOL)
 # #         logger.info(f"[TTAF] saved artifacts to {fpath}")
@@ -1290,7 +1290,7 @@ class TTAFDefender(Defender):
         min_dataset_size: int = 30,
         max_remove_ratio: float = 0.3,
         save_artifacts: bool = True,
-        artifacts_dir: str = "./leaf",
+        artifacts_dir: str = "./ttaf",
         targetDataset: Optional[str] = None,
 
         # feature extraction
@@ -1748,7 +1748,7 @@ class TTAFDefender(Defender):
         ) if self.dominant_length_scale else None
 
         feature_pack = {
-            "defender": "leaf",
+            "defender": "ttaf",
             "mode": "feature_extraction_only_item_aware",
             "true_labels": true_labels,
             "dataset": self.targetDataset,
@@ -1802,7 +1802,7 @@ class TTAFDefender(Defender):
             feature_pack["raw_text"] = raw_text_payload
 
         if self.save_artifacts:
-            fpath = os.path.join(self.run_dir, "leaf_features_only.pkl")
+            fpath = os.path.join(self.run_dir, "ttaf_features_only.pkl")
             with open(fpath, "wb") as f:
                 pickle.dump(feature_pack, f, protocol=pickle.HIGHEST_PROTOCOL)
             logger.info(f"[TTAF] saved feature-only artifacts to {fpath}")
@@ -2452,7 +2452,7 @@ class TTAFDefender(Defender):
             return
 
         payload: Dict[str, Any] = {
-            "defender": "leaf",
+            "defender": "ttaf",
             "mode": mode,
             "true_labels": true_labels,
             "preds": preds.astype(np.int32),
@@ -2513,7 +2513,7 @@ class TTAFDefender(Defender):
         if raw_text_payload is not None:
             payload["raw_text"] = raw_text_payload
 
-        fpath = os.path.join(self.run_dir, "leaf_features.pkl")
+        fpath = os.path.join(self.run_dir, "ttaf_features.pkl")
         with open(fpath, "wb") as f:
             pickle.dump(payload, f, protocol=pickle.HIGHEST_PROTOCOL)
         logger.info(f"[TTAF] saved artifacts to {fpath}")
